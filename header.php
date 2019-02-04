@@ -29,13 +29,9 @@ session_start();
                 <button type="submit" name="logout-submit"><i class="fas fa-sign-out-alt"></i></button>
             </form></div>';
             } else {
-                echo '<div class="nav-login">
-                <form action="includes/login.inc.php" method="POST">
-                <input type="text" name="mailuid" placeholder="Username/e-mail">
-                <input type="password" name="pwd" placeholder="Password">
-                <button type="submit" name="login-submit">Login</button>
-            </form>
-            <a href="signup.php">Signup</a>';
+                echo '
+                <div class="title"><a href="index.php"><h1 class="welcome">Your Calorie Tracker</h1></a></div>
+    </section>';
             }
         ?>
             </div>

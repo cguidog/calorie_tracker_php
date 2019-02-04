@@ -74,7 +74,16 @@
                 }
 
             } else {
-                echo '<h2>You are logged Out!</h2>';
+                echo '
+                <section class="main-container">
+                <div class="main-wrapper">
+                <form action="includes/login.inc.php" method="POST" class="form">
+                <input type="text" name="mailuid" placeholder="Username/e-mail">
+                <input type="password" name="pwd" placeholder="Password">
+                <button type="submit" name="login-submit">Login</button>
+            </form>
+    </div>
+    <p>First time here? <a href="signup.php">Sign Up!</a></p>';
             }
 
 

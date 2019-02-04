@@ -61,6 +61,9 @@ h1 {
     margin: 1rem 0 0 0;
     text-align: center;
 }
+.welcome {
+    margin-bottom: 2rem;
+}
 h2 {
     margin-bottom: 0;
     color: #6495ff;
@@ -255,6 +258,10 @@ label {
     display: grid;
     grid-template-columns: 60% 20% 20%;
   }
+  body > section > div > div:nth-child(4) > div > div:nth-child(1) > h3 {
+      margin-top: 1rem;
+      font-size: 2rem;
+  }
 a i.fas {
     padding-left: 0.5rem!important;
     padding-right: 0.5rem!important;
@@ -272,7 +279,15 @@ a i.fas {
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
-
+body > section > div > div > p > span > a {
+    float: right;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    color: #fff;
+}
+body > section > div > div > p > span > a:hover {
+    color: #6495ff;
+}
 .summary {
     background: #fff!important;
     font-size: 2rem;
@@ -280,15 +295,36 @@ a i.fas {
 
 @media only screen and (max-width: 600px) {
     .details {
-        width: 80%;
+        width: 90%;
     
     }
     .detail-title {
         display: grid;
-        grid-template-columns: 70% 30%;
+        grid-template-columns: 50% 25% 25%;
       }
       .nav-wrapper {
         display: grid;
-        grid-template-columns: 20% 60% 20%;
+        grid-template-columns: 7% 80% 13%;
+    }
+    body > section > div > div > div > div:nth-child(2) > span {
+        float: right;
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 1280px) {
+    .details {
+        width: 50%;
+    
+    }
+    .detail-title {
+        display: grid;
+        grid-template-columns: 60% 20% 20%;
+      }
+      .nav-wrapper {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+    }
+    body > section > div > div > div > div:nth-child(2) > span {
+        float: right;
     }
   }
