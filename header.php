@@ -20,7 +20,7 @@ session_start();
                 <?php
             if (isset($_SESSION['userId'])) {
                 echo '
-                <div class="title"><a href="index.php"><h1>Your Calorie Tracker</h1></a></div>
+                <div class="title"><a href="index.php"><h1>Your Calories Tracker</h1></a></div>
                 <div class="menu-buttom"><span class="menu-list-item"><a href="index.php"><i class="fas fa-home"></i></a></span></div>
                 <div class="menu-buttom"><span class="menu-list-item"><a href="newitem.php"><i class="fas fa-plus"></i></a></span></div>
                 <div class="menu-buttom"><span class="menu-list-item"><a href="history.php"><i class="fas fa-history"></i></a></span></div>
@@ -30,7 +30,7 @@ session_start();
             </form></div>';
             } else {
                 echo '
-                <div class="title"><a href="index.php"><h1 class="welcome">Your Calorie Tracker</h1></a></div>
+                <div class="title"><a href="index.php"><h1 class="welcome">Your Calories Tracker</h1></a></div>
     </section>';
             }
         ?>
