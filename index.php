@@ -16,16 +16,11 @@
 
                     $rowLimits = $resultsLimits->fetch_assoc();
 
-                    echo '
-                    <h2>Your daily limit is</h2>
-                    <form action="includes/limit.inc.php" method="POST" class="form">
-                    <input id="limit" type="number" value='.$rowLimits['limits'].' name="limit" placeholder="Daily Limit">
-                    <p>calories</p>
-                    <button type="submit" name="limit-update">Update Limit</button>
-                    </form>';
                     $dlimit = $rowLimits['limits'];
                 } else {
-                    echo '<form action="includes/limit.inc.php" method="POST" class="form">
+                    echo '
+                    <p>Enter your daily calorie limit to start!</p>
+                    <form action="includes/limit.inc.php" method="POST" class="form">
                     <input type="number" name="limit" placeholder="Daily Limit">
                     <button type="submit" name="limit-submit">Submit</button>
                     </form>';
@@ -51,9 +46,20 @@
                         $dtotal += $row["calories"];
                         $limitleft = $dlimit - $dtotal;
                     }
-
-                    echo '<div class="details"><p class="summary">Daily total: '.$dtotal.' calories</p>';
-                    echo '<p class="summary">Available: ' .$limitleft.' calories</p></div>';
+                    echo '<div class="dashboard">
+                            <div>
+                                <div class="dashboard-field">Limit</div>
+                                <div>'.$dlimit.'</div>
+                            </div>
+                            <div>
+                                <div class="dashboard-field">Consumed</div>
+                                <div>'.$dtotal.'</div>
+                            </div>
+                            <div>
+                                <div class="dashboard-field">Left</div>
+                                <div>'.$limitleft.'</div>
+                            </div>
+                        </div>';
                     echo '<div class="details">
                             <div class="detail-title">
                                 <div><h3>Detail</h3></div>
@@ -65,9 +71,24 @@
                     }
                     echo '</div>';
                 } else {
+                    echo '<div class="dashboard">
+                            <div>
+                                <div class="dashboard-field">Limit</div>
+                                <div>'.$dlimit.'</div>
+                            </div>
+                            <div>
+                                <div class="dashboard-field">Consumed</div>
+                                <div>'.$dtotal.'</div>
+                            </div>
+                            <div>
+                                <div class="dashboard-field">Left</div>
+                                <div>'.$limitleft.'</div>
+                            </div>
+                        </div>';
                     echo '<div class="details">
                     <div class="detail-title">
                         <div><h3>There are no items to show, add some!</h3></div>
+                        <div><span class="menu-list-item"><a href="favorites.php"><i class="fas fa-heart"></i></a></span></div>
                         <div><span class="menu-list-item"><a href="newitem.php"><i class="fas fa-plus"></i></a></span></div>
                     </div></div>';
                     
@@ -75,15 +96,14 @@
 
             } else {
                 echo '
-                <section class="main-container">
-                <div class="main-wrapper">
+                <p>Enter your user information to access your account</p>
                 <form action="includes/login.inc.php" method="POST" class="form">
                 <input type="text" name="mailuid" placeholder="Username/e-mail">
                 <input type="password" name="pwd" placeholder="Password">
                 <button type="submit" name="login-submit">Login</button>
             </form>
     </div>
-    <p>First time here? <a href="signup.php">Sign Up!</a></p>';
+    <p class="signup">First time here? <a href="signup.php">Sign Up!</a></p>';
             }
 
 

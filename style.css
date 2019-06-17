@@ -1,330 +1,172 @@
+/*********** GENERAL CUSTOMIZATION ***********/
+/******************* START *******************/
 
-body {
-    font-family: 'Quicksand', sans-serif!important;
-    color: #797979;
-}
-
-input:focus,
-select:focus,
-textarea:focus,
-button:focus {
-    outline: none;
+* {
+    font-family: 'Encode Sans Expanded', sans-serif;
 }
 
-.main-container {
-    text-align: center;
-}
-.nav-wrapper {
-    display: grid;
-    grid-template-columns: 30% 40% 30%;
-}
-.title {
-    grid-area: header;
-}
-.menu-button {
-    grid-area: menu;
-    margin: auto;
-    text-align: center;
-}
-.menu {
-    display: grid;
-    grid-template-areas:
-      'header header header header'
-      'menu menu menu menu';
-
-}
-
-.menu-list {
-    padding-left: 30px;
-}
-.menu-list-item {
-    background-color: #fff;
-    box-shadow: 0px 0px 5px #6495ff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    color: #fff!important;
-    float: left;
-    font-size: 1.5rem;
-    height: 3rem;
-    list-style: none;
-    margin: 1rem;
-    text-align: center;
-    vertical-align: center;
-    width: 3rem;
-}
 a {
     text-decoration: none;
+    color: #522aa7;
 }
-h1 {
-    color:#6495ff;
-    font-size: 2rem;
-    margin: 1rem 0 0 0;
+
+body {
+    margin: 0;
+    background-color: #eeeeee;
+}
+
+button {
+    background-color: #522aa7;
+    border: 1px solid #4213a7;
+    color: #eeeeee;
+    font-size: 1rem;
+}
+
+h2 {
+    color: #3b3b3b;
+    text-align: center;
+    margin: 1rem auto;
+}
+
+p {
+    color: #3b3b3b;
     text-align: center;
 }
-.welcome {
-    margin-bottom: 2rem;
-}
-h2 {
-    margin-bottom: 0;
-    color: #6495ff;
-}
-.menu-list-item:hover {
-    background-color: #6495ff;
-    color:#fff!important;
-}
-.menu-list-item a{
-    color:#6495ff;
-    position: relative;
-    top: 22%; 
-}
-.menu-list-item a:hover{
-    color: #fff!important;
-}
-.nav-login button{
-    background-color: #fff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    color: #6495ff;
-    float: left;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.5rem;
+
+.title {
+    background-color: #522aa7;
     height: 3rem;
-    margin: 1rem;
-    width: 3rem;
+    padding: 1rem 0;
+}
+.title a h1{
+    color: #eeeeee;
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
 }
 
-.nav-login button:hover {
-    background-color: #6495ff;
-    color: #cecece;
-}
+/*********** GENERAL CUSTOMIZATION ***********/
+/******************** END ********************/
 
 
-/*Signup.php */
+
+
+/*************** SIGN IN PAGE ****************/
+/******************* START *******************/
 
 .form {
-    margin: 0 auto;
-    width: 400px;
+    margin: 2rem auto;
+    width: 90%;
+    text-align:center;
 }
 
 .form input {
-    background-color: #fff;
+
     border: none;
-    color:#111;
-    float: left;
-    font-family: 'Quicksand', sans-serif;
+    border-bottom: 1px solid #737179;
+    color: #3b3b3b;
+    font-size: 1rem;
+    margin: 0.5rem auto;
+    text-align: center;
+    width: 100%;
+}
+
+.form input:focus {
+    border: none;
+    border-bottom: 1px solid #522aa7;
+}
+
+.signup {
+    color: #3b3b3b;
+    font-size: 1rem;
+    padding-right: 5%;
+    text-align: right;
+}
+
+/*************** SIGN IN PAGE ****************/
+/******************** END ********************/
+
+
+
+
+/***************** HOME PAGE *****************/
+/******************* START *******************/
+
+.menu {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.menu-button {
+    background-color: #522aa7;
     font-size: 2rem;
-    height: 40px;
-    line-height: 40px;
-    margin-bottom: 4px;
-    padding: 0px 5%;
     text-align: center;
-    width: 90%;
 }
 
-.button {
-    background-color: #fff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    color:#6495ff;
-    cursor: pointer;
-    display: block;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    height: 23px;
-    margin: 1rem auto;
-    width: 30%;
-}
-.button:hover {
-    background-color: #6495ff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    color:#fff;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-}
-.form button {
-    background-color: #fff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    color:#6495ff;
-    cursor: pointer;
-    display: block;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-    height: 30px;
-    margin: 1rem auto;
-    width: 30%;
+.menu-button span a {
+    color: #eeeeee;
+    padding: 1rem 0;
 }
 
-.form button:hover {
-    background-color: #6495ff;
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    color:#fff;
-    cursor: pointer;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 16px;
-}
-#limit {
-    font-size: 3rem;
-    color: #6495ff;
-}
-/*newitem.php */
-
-.favorite {
-    /* display: block; */
-    position: relative;
-    margin-bottom: 2rem;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;  
+body > header > nav > div.menu > div:nth-child(5) > form > button {
+    background-color: none;
+    border: none;
+    color: #eeeeee;
+    font-size: 2rem;
+    padding: 0;
 }
 
-.favorite input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
-  }
-
-/* Create a custom checkbox */
-.checkmark {
-    background-color: #ccc;
-    margin-left: 1rem;
-    position: absolute;
-    height: 25px;
-    width: 25px;
-  }
-  
-  /* On mouse-over, add a grey background color */
-  .favorite:hover input ~ .checkmark {
-    background-color: #ccc;
-  }
-  
-  /* When the checkbox is checked, add a blue background */
-  .favorite input:checked ~ .checkmark {
-    background-color: #6495ff;
-  }
-  
-  /* Create the checkmark/indicator (hidden when not checked) */
-  .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
-  }
-  
-  /* Show the checkmark when checked */
-  .favorite input:checked ~ .checkmark:after {
-    display: block;
-  }
-  
-  /* Style the checkmark/indicator */
-  .favorite .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-  }
-
-label {
-    padding: 10px 0;
-} 
+.dashboard {
+    border-bottom: 1px solid #522aa7;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    text-align: center;
+}
+.dashboard-field {
+    background-color: #522aa7;
+    color: #eeeeee;
+    font-size: 1rem;
+}
 .details {
-    border: solid 2px #6495ff;
-    border-radius: 25px;
-    box-shadow: 0px 0px 5px #6495ff;
-    margin: 2rem auto;
-    overflow: auto;
-    text-align: center;
-    width: 25%;
-
+    width: 90%;
+    margin: auto;
 }
 .detail-title {
+    margin-top: 3rem;
+    border: 1px solid #522aa7;
     display: grid;
-    grid-template-columns: 60% 20% 20%;
-  }
-  body > section > div > div:nth-child(4) > div > div:nth-child(1) > h3 {
-      margin-top: 1rem;
-      font-size: 2rem;
-  }
+    grid-template-columns: 70% 15% 15%;
+}
+
+.detail-title div h3 {
+    text-align: center;
+}
+
+.detail-title div span a i {
+    font-size: 2rem;
+    margin: 1rem 0;
+
+}
+
 a i.fas {
     padding-left: 0.5rem!important;
     padding-right: 0.5rem!important;
 }
-.details p:nth-child(even) {
-    background-color: #bfd3ff;
+.details p {
+    border-bottom: 1px solid #737179;
     margin: 0;
     padding-bottom: 1rem;
     padding-top: 1rem;
 }
 
-.details p:nth-child(odd) {
-    background-color: #e0eaff;
-    margin: 0;
-    padding-bottom: 1rem;
-    padding-top: 1rem;
-}
 body > section > div > div > p > span > a {
     float: right;
     margin-left: 1rem;
     margin-right: 1rem;
-    color: #fff;
+    color: #3b3b3b;
 }
 body > section > div > div > p > span > a:hover {
     color: #6495ff;
 }
-.summary {
-    background: #fff!important;
-    font-size: 2rem;
-}
-
-@media only screen and (max-width: 600px) {
-    .details {
-        width: 90%;
-    
-    }
-    .detail-title {
-        display: grid;
-        grid-template-columns: 50% 25% 25%;
-      }
-      .nav-wrapper {
-        display: grid;
-        grid-template-columns: 7% 80% 13%;
-    }
-    body > section > div > div > div > div:nth-child(2) > span {
-        float: right;
-    }
-  }
-
-  @media only screen and (min-width: 601px) and (max-width: 1280px) {
-    .details {
-        width: 50%;
-    
-    }
-    .detail-title {
-        display: grid;
-        grid-template-columns: 60% 20% 20%;
-      }
-      .nav-wrapper {
-        display: grid;
-        grid-template-columns: 30% 40% 30%;
-    }
-    body > section > div > div > div > div:nth-child(2) > span {
-        float: right;
-    }
-  }
+/***************** HOME PAGE *****************/
+/******************** END ********************/
