@@ -65,7 +65,7 @@ if (isset($_POST['date-submit'])) {
                     }
                     echo '</div>';
                 } else {
-                    echo '<div class="details"><p>0 results</p></div>';
+                    echo '<div class="details"><h2><a href="../history.php" >No results</a></h2></div>';
                     exit();
                     
                 }
