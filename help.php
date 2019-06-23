@@ -25,16 +25,16 @@
                             <div>Settings</div>
                         </div>
                         <div class="help">
+                            <div><i class="fas fa-sign-out-alt"></i></div>
+                            <div>Log Out</div>
+                        </div>
+                        <div class="help">
                             <div><i class="fas fa-plus"></i></div>
                             <div>Add item</div>
                         </div>
                         <div class="help">
                             <div><i class="fas fa-pen"></i></div>
                             <div>Edit item</div>
-                        </div>
-                        <div class="help">
-                            <div><i class="fas fa-trash-alt"></i></div>
-                            <div>Delete item</div>
                         </div>
                         <div class="help">
                             <div><i class="fas fa-trash-alt"></i></div>
