@@ -22,7 +22,8 @@
                                 <div><span class="menu-list-item"><a href="index.php"><i class="fas fa-home"></i></a></span></div>
                             </div>';
                     foreach ($results as $row) {
-                        echo '<p>'. $row["item"]. ' - Calories: '. $row["calories"].  '<span><a href="includes/newitem-favorite.inc.php?item='.$row["item"].'&calories='.$row["calories"].'"><i class="fas fa-plus"></i></a></span><span><a href="includes/remove-favorite.inc.php?id='.$row["itemId"].'"><i class="fas fa-heart-broken"></i></a></span></p>';
+                        echo '<div><p>'. $row["item"].'</p></div>';
+                        echo '<p>Calories: '. $row["calories"].  '<span><a href="includes/newitem-favorite.inc.php?item='.$row["item"].'&calories='.$row["calories"].'"><i class="fas fa-plus"></i></a></span><span><a href="includes/remove-favorite.inc.php?id='.$row["itemId"].'"><i class="fas fa-heart-broken"></i></a></span></p>';
                     }
                     echo '</div>';
                 } else {
