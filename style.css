@@ -53,7 +53,9 @@ p {
     height: 25px;
     width: 25px;
   }
-  
+  .favorite-box {
+      display: none;
+  }
   /* On mouse-over, add a grey background color */
   .favorite:hover input ~ .checkmark {
     background-color: #ccc;
@@ -61,7 +63,7 @@ p {
   
   /* When the checkbox is checked, add a blue background */
   .favorite input:checked ~ .checkmark {
-    background-color: #6495ff;
+    background-color: #522aa7;
   }
   
   /* Create the checkmark/indicator (hidden when not checked) */
@@ -196,7 +198,14 @@ a i.fas {
     padding-right: 0.5rem!important;
 }
 .details p {
-    border-bottom: 1px solid #737179;
+    border-bottom: 1px solid #7371796b;
+    margin: 0;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.details div p {
+    border-bottom: none;
     margin: 0;
     padding-bottom: 1rem;
     padding-top: 1rem;

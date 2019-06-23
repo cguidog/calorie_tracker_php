@@ -52,10 +52,11 @@ session_start();
 
 
 <section class="main-container">
-            <form action="includes/history.inc.php" method="POST" class="history-form">
-                <input type="text" id="datepicker" name="date" autocomplete="off">
-                <button type="submit" name="date-submit">Search</button>
-            </form>
+<h2>Pick a date to display</h2>
+    <form action="includes/history.inc.php" method="POST" class="form">
+        <input placeholder="Date" type="text" id="datepicker" name="date" autocomplete="off">
+        <button type="submit" name="date-submit">Search</button>
+    </form>
 </section>
 
 <?php

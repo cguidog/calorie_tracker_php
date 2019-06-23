@@ -1,15 +1,19 @@
 <?php
-session_start();
+
+require 'header.inc.php';
 error_reporting(E_ALL);
 ini_set("display_errors", 1);
 date_default_timezone_set('America/New_York');
 if (isset($_POST['date-submit'])) {
     require 'dbh.inc.php';
     $date = $_POST['date'];
+    $brokenDate = explode("-", $_POST['date']);
+    $month = $brokenDate[1];
+    $day = $brokenDate[2];
+    $year = $brokenDate[0];
     $userId = $_SESSION['userId'];
     $sql = "SELECT * FROM items WHERE date= ? AND IdUser= ?;";
     $stmt = mysqli_stmt_init($conn);
-
     echo '<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -26,29 +30,7 @@ if (isset($_POST['date-submit'])) {
         <nav class="nav-wrapper">
                 <div></div>
                     <div>';
-                    if (isset($_SESSION['userId'])) {
-                        echo '<a href="../index.php"><h1>Calorie Tracker</h1></a>
-                        <ul class="menu-list">
-                        <li class="menu-list-item"><a href="../index.php"><i class="fas fa-home"></i></a></li>
-                        <li class="menu-list-item"><a href="../newitem.php"><i class="fas fa-plus"></i></a></li>
-                        <li class="menu-list-item"><a href="../history.php"><i class="fas fa-history"></i></a></li>
-                    </ul>
-                <form class="nav-login" action="logout.inc.php" method="POST">
-                <button type="submit" name="logout-submit"><i class="fas fa-sign-out-alt"></i></button>
-            </form>';
-                    } else {
-                        echo '<form action="includes/login.inc.php" method="POST">
-                        <input type="text" name="mailuid" placeholder="Username/e-mail">
-                        <input type="password" name="pwd" placeholder="Password">
-                        <button type="submit" name="login-submit">Login</button>
-                    </form>
-                    <a href="signup.php">Signup</a>';
-                    }
-    echo '
-    </div>
-</div>
-</nav>
-</header>';
+
         if (empty($date)) {
 
     header("Location: ../history.php?error=emptyfields");
@@ -73,12 +55,13 @@ if (isset($_POST['date-submit'])) {
 
                     echo '<div class="details">
                             <div class="detail-title">
-                                <div><h3>'. $date.' detail</h3></div>
-                                <div><p>Calorie Total</br>'. $dtotal.'</p></div>
-                                <div><span class="menu-list-item"><a href="../index.php"><i class="fas fa-home"></i></a></span></div>
+                                <div><h3>Detail '. $month.'-'. $day.'-'. $year.'</h3></div>
+                                <div><h3>Total</h3></div>
+                                <div><h3>'. $dtotal.'</h3></div>
                             </div>';
                     foreach ($result as $row) {
-                        echo "<p> Item: ". $row["item"]. " - Calories: ". $row["calories"].  "</p>";
+                        echo '<div><p>'. $row["item"].'</p></div>';
+                        echo "<p>Calories: ". $row["calories"].  "</p>";
                     }
                     echo '</div>';
                 } else {

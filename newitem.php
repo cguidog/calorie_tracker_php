@@ -12,7 +12,7 @@
                 <label class= "favorite" for="favorite">Add to Favorites? 
                 <input class="favorite-box" type="checkbox" id="favorite" value="1" name="favorite">
                 <span class="checkmark"></span> 
-                </label>
+                </label><br>
                 <button type="submit" name="item-submit">Add</button>
             </form>
         </div>

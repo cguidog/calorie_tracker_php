@@ -20,10 +20,10 @@ session_start();
                 <nav class="nav-wrapper">
                     <div class="title"><a href="index.php"><h1>Your Calorie Tracker</h1></a></div>
                     <div class="menu">
-                        <div class="menu-button"><span class="menu-list-item"><a href="index.php"><i class="fas fa-home"></i></a></span></div>
-                        <div class="menu-button"><span class="menu-list-item"><a href="history.php"><i class="fas fa-history"></i></a></span></div>
-                        <div class="menu-button"><span class="menu-list-item"><a href="help.php"><i class="fas fa-question"></i></a></span></div>
-                        <div class="menu-button"><span class="menu-list-item"><a href="settings.php"><i class="fas fa-cogs"></i></a></span></div>
+                        <div class="menu-button"><span class="menu-list-item"><a href="../index.php"><i class="fas fa-home"></i></a></span></div>
+                        <div class="menu-button"><span class="menu-list-item"><a href="../history.php"><i class="fas fa-history"></i></a></span></div>
+                        <div class="menu-button"><span class="menu-list-item"><a href="../help.php"><i class="fas fa-question"></i></a></span></div>
+                        <div class="menu-button"><span class="menu-list-item"><a href="../settings.php"><i class="fas fa-cogs"></i></a></span></div>
                         <div class="menu-button">
                             <form class="nav-login" action="includes/logout.inc.php" method="POST">
                                 <button type="submit" name="logout-submit"><i class="fas fa-sign-out-alt"></i></button>
